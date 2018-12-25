@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>はじめてのmBaaS</title>
+  </head>
+  <script type="text/javascript" src="ncmb.min.js" charset"utf-8"></script>
+  <script>
+    var ncmb = new NCMB("b8e112ec2751d9382c28c486dcc1cbf4cdd801ba1bd9a0ea81c75ef2eb590a1d", "1cddf87b1016513e159c74454e95f372408add78783c22e94ec9f59aeeab9801");
+    
+    var TestClass = ncmb.DataStore("TestClass");
+    
+    var testClass = new TestClass();
+    testClass.set("message", "Hwllo, NCMB");
+    testClass.save()
+      .then(function(){
+      })
+      
+      .catch(function(err){
+      });
+    </script>
+ </html>
